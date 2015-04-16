@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_imageRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/imageRequeset"/>
+    <Button
+        android:id="@+id/btn_imageLoader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ImageLoader"
+        android:layout_below="@id/btn_imageRequest"/>
+    <Button
+        android:id="@+id/btn_networkImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/networkImageView"
+        android:layout_below="@id/btn_imageLoader"/>
+
+    <Button
+        android:id="@+id/btn_string"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stringRequest"
+        android:layout_below="@id/btn_networkImageView"/>
+    <Button
+        android:id="@+id/btn_json"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/jsonRequest"
+        android:layout_below="@id/btn_string"/>
+    <Button
+        android:id="@+id/btn_xml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/xmlRequest"
+        android:layout_below="@id/btn_json"/>
+    <Button
+        android:id="@+id/btn_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/postRequest"
+        android:layout_below="@id/btn_xml"/>
+
+</RelativeLayout>

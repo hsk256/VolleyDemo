@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">VolleyDemo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="ImageLoader">ImageLoader</string>
+    <string name="imageRequeset">Image请求</string>
+    <string name="networkImageView">NetWorkImageView</string>
+    <string name="stringRequest">String 请求</string>
+    <string name="jsonRequest">Json 请求</string>
+    <string name="xmlRequest">Xml自定义请求</string>
+    <string name="postRequest">自定义post请求</string>
+</resources>
