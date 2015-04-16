@@ -6,6 +6,7 @@ import android.support.v4.util.LruCache;
 import android.widget.ImageView;
 
 import com.android.volley.toolbox.ImageLoader;
+import com.heshaokang.util.BitmapCache;
 import com.heshaokang.util.VolleyUtil;
 import com.heshaokang.volleydemo.R;
 
@@ -39,25 +40,5 @@ public class ImageLoaderAdapter extends ImageBaseAdapter{
         //存储当前请求的container 用于取消请求
         imageView.setTag(imageContainer);
     }
-    private class BitmapCache implements ImageLoader.ImageCache {
-        LruCache<String,Bitmap> lruCache;
-        public BitmapCache() {
-            int size = 10*1024*1024;
-            lruCache = new LruCache<String,Bitmap>(size) {
-                @Override
-                protected int sizeOf(String key, Bitmap value) {
-                    return value.getRowBytes()*value.getHeight();
-                }
-            };
-        }
-        @Override
-        public Bitmap getBitmap(String s) {
-            return lruCache.get(s);
-        }
 
-        @Override
-        public void putBitmap(String s, Bitmap bitmap) {
-            lruCache.put(s,bitmap);
-        }
-    }
 }
