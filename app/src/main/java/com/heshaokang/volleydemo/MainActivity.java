@@ -29,6 +29,7 @@ import com.android.volley.toolbox.Volley;
 import com.heshaokang.fragment.ImageLoaderFragment;
 import com.heshaokang.fragment.ImageRequestFragment;
 import com.heshaokang.fragment.NetworkImageViewFragment;
+import com.heshaokang.fragment.StringRequestFragment;
 import com.heshaokang.util.Constants;
 
 import org.json.JSONArray;
@@ -80,6 +81,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 intent.putExtra(Constants.Extra.FRAGMENT_INDEX, NetworkImageViewFragment.INDEX);
                 break;
             case R.id.btn_string:
+                intent.putExtra(Constants.Extra.FRAGMENT_INDEX, StringRequestFragment.INDEX);
                 break;
             case R.id.btn_json:
                 break;

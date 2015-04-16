@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import com.heshaokang.fragment.ImageLoaderFragment;
 import com.heshaokang.fragment.ImageRequestFragment;
 import com.heshaokang.fragment.NetworkImageViewFragment;
+import com.heshaokang.fragment.StringRequestFragment;
 import com.heshaokang.util.Constants;
 
 /**
@@ -48,6 +49,14 @@ public class RequestActivity extends FragmentActivity{
                     fr = new NetworkImageViewFragment();
                 }
                 title = R.string.networkImageView;
+                break;
+            case StringRequestFragment.INDEX:
+                tag = StringRequestFragment.class.getSimpleName();
+                fr = getSupportFragmentManager().findFragmentByTag(tag);
+                if(fr==null) {
+                    fr = new StringRequestFragment();
+                }
+                title = R.string.stringRequest;
                 break;
         }
         setTitle(title);
