@@ -5,6 +5,8 @@ package com.heshaokang.util;
  */
 public class Constants {
     private Constants(){}
+    public static final String JSON_REQUEST_URL = "http://app.api.autohome.com.cn/autov4.3/cars/seriesprice-a2-pm2-v4.3.0-b42-t1.html";
+    public static final String XML_REQUEST_URL = "http://flash.weather.com.cn/wmaps/xml/china.xml";
     public static final String[] IMAGES_URL = {
             // 小图
             "http://car0.autoimg.cn/upload/2014/10/3/s_20141003015514509-110.jpg",

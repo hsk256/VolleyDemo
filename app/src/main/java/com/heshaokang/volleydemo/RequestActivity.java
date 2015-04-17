@@ -6,8 +6,11 @@ import android.support.v4.app.FragmentActivity;
 
 import com.heshaokang.fragment.ImageLoaderFragment;
 import com.heshaokang.fragment.ImageRequestFragment;
+import com.heshaokang.fragment.JsonRequestFragment;
 import com.heshaokang.fragment.NetworkImageViewFragment;
+import com.heshaokang.fragment.PostRequestFragment;
 import com.heshaokang.fragment.StringRequestFragment;
+import com.heshaokang.fragment.XmlRequestFragment;
 import com.heshaokang.util.Constants;
 
 /**
@@ -57,6 +60,30 @@ public class RequestActivity extends FragmentActivity{
                     fr = new StringRequestFragment();
                 }
                 title = R.string.stringRequest;
+                break;
+            case JsonRequestFragment.INDEX:
+                tag = JsonRequestFragment.class.getSimpleName();
+                fr = getSupportFragmentManager().findFragmentByTag(tag);
+                if(fr==null) {
+                    fr = new JsonRequestFragment();
+                }
+                title = R.string.jsonRequest;
+                break;
+            case XmlRequestFragment.INDEX:
+                tag = XmlRequestFragment.class.getSimpleName();
+                fr = getSupportFragmentManager().findFragmentByTag(tag);
+                if(fr==null) {
+                    fr = new XmlRequestFragment();
+                }
+                title = R.string.xmlRequest;
+                break;
+            case PostRequestFragment.INDEX:
+                tag = PostRequestFragment.class.getSimpleName();
+                fr = getSupportFragmentManager().findFragmentByTag(tag);
+                if(fr==null) {
+                    fr = new PostRequestFragment();
+                }
+                title = R.string.postRequest;
                 break;
         }
         setTitle(title);
